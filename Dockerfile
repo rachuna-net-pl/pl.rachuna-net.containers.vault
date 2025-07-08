@@ -19,22 +19,22 @@ RUN apt-get update && apt-get install -y \
         jq \
         lsb-release \
         openssh-client \
-# Add repository hashicorp
+    # Add repository hashicorp
     && curl -fsSL https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg \
     && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hashicorp.list \
-# Install Vault
+    # Install Vault
     && apt-get update && apt-get install -y vault \
     && apt-get upgrade -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
 
-# Make scripts executable
+    # Make scripts executable
     && chmod +x /opt/scripts/*.bash \
 
-# Create a non-root user and set permissions
-    && useradd -m -s /bin/bash user_vault \
-    && chown -R user_vault:user_vault /opt/scripts
+    # Create a non-root user and set permissions
+    && useradd -m -s /bin/bash nonroot \
+    && chown -R nonroot:nonroot /opt/scripts
 
-USER user_vault
+USER nonroot
 
 ENTRYPOINT [ "/opt/scripts/entrypoint.bash" ]
