@@ -1,10 +1,21 @@
-::include{file=.gitlab/badges.md}
-# ![](https://gitlab.com/pl.rachuna-net/infrastructure/terraform/iac-gitlab/-/raw/main/images/project/vault.png){height=20px} vault
+# <img src=".gitlab/avatar.png" alt="vault" height="20"/> vault
 
-Obraz Dockerowy z narzędziem Vault
+[![](https://gitlab.com/pl.rachuna-net/containers/vault/-/badges/release.svg)](https://gitlab.com/pl.rachuna-net/containers/vault/-/releases)
+[![](https://gitlab.com/pl.rachuna-net/containers/vault/badges/main/pipeline.svg)](https://gitlab.com/pl.rachuna-net/containers/vault/-/commits/main)
 
-::include{file=docs/main.md}
-::include{file=.gitlab/contributions.md}
-::include{file=.gitlab/license.md}
-::include{file=.gitlab/authors.md}
+Obraz Dockerowy z narzędziem Vault.
+
+---
+## Contributions
+Jeśli masz pomysły na ulepszenia, zgłoś problemy, rozwidl repozytorium lub utwórz Merge Request. Wszystkie wkłady są mile widziane!
+[Contributions](CONTRIBUTING.md)
+
+---
+## License
+Projekt licencjonowany jest na warunkach [Licencji MIT](LICENSE).
+
+---
+# Author Information
+### &emsp; Maciej Rachuna
+# <img src="https://gitlab.com/pl.rachuna-net/gitlab-profile/-/raw/main/assets/logo/website_logo_transparent_background.png" alt="rachuna-net.pl" height="100"/>
 
