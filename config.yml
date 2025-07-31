@@ -37,6 +37,7 @@ extra_commands:
   - chmod 777 /opt/scripts
   - chmod 777 /opt/scripts/*
   - vault --version
+  - rm -fr /opt/vault
 
 copy:
   - source: scripts/
